@@ -1,3 +1,5 @@
+package org.example;
+
 import CoffeeTime.InputEvents.Mouse;
 import CoffeeTime.InputEvents.Position;
 import com.bridge.processinputhandler.IEventSubscriber;
@@ -15,6 +17,7 @@ public class MouseClickSubscriber implements IEventSubscriber<Mouse> {
             mouseClicked.set(true);
             Position pos = mouseEvent.position();
             clickedCoord = new Coord((int) pos.x(), (int) pos.y());
+            System.out.println(pos.x() + " " + pos.y());
         }
     }
 
